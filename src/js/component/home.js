@@ -37,7 +37,7 @@ export class Home extends React.Component {
 		} else if (this.state.winner != "") {
 			return (
 				<div>
-					<h1>
+					<h1 className="congratulations">
 						Congratulations{" "}
 						{this.state.winner == "X"
 							? this.state.player1

@@ -39,6 +39,13 @@ input{
     align-items: center;
     background-color: rgb(93,88,83);
 }
+.blue{
+    color:rgb(63,172,214);
+}
+.yellow{
+    color: rgb(237,217,125);
+}
+
 
 .square-board{
 	width: 800px;
@@ -50,4 +57,8 @@ input{
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1px;
+}
+
+.congratulations{
+    color: rgb(69,111,83);
 }

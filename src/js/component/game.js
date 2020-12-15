@@ -67,6 +67,13 @@ export class Game extends React.Component {
 			}
 		});
 	}
+	/*checkForX() {
+		if (newSquareValues.includes("X")) {
+			return "square yellow";
+		} else {
+			return "square blue";
+		}
+	}*/
 
 	render() {
 		return (
