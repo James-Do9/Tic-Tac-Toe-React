@@ -20,14 +20,14 @@ export class StartUpScreen extends React.Component {
 		return (
 			<div>
 				<h1>Tic Tac Toe in React.js</h1>
-				<h2>Pick a weapon!</h2>
+				<h2>Pick a weapon</h2>
 				<div className="text-center mt-5">
 					<button
 						type="button"
 						className="btn btn-primary"
 						data-toggle="modal"
 						data-target="#playerSelect">
-						Click here players!
+						Click here to enter usernames!
 					</button>
 					<div
 						className="modal fade"
@@ -39,14 +39,14 @@ export class StartUpScreen extends React.Component {
 						<div
 							className="modal-dialog modal-dialog-centered"
 							role="document">
-							<div className="modal-content">
+							<div className="modal-content modal-background">
 								<div>
 									<br />
-									<h5
+									<h1
 										className="modal-title mx-auto"
 										id="exampleModalLongTitle">
-										Choose your weapon
-									</h5>
+										Enter Your Usernames:
+									</h1>
 								</div>
 								<div className="modal-body d-inline-flex">
 									<input
@@ -71,9 +71,8 @@ export class StartUpScreen extends React.Component {
 									/>
 								</div>
 								<div className="d-flex justify-content-around">
-									<button
-										type="button"
-										className="btn btn-secondary"
+									<div
+										className="button-style"
 										data-dismiss="modal"
 										onClick={() =>
 											this.props.onSetTurn(
@@ -83,10 +82,9 @@ export class StartUpScreen extends React.Component {
 											)
 										}>
 										<span className="xMarker">X</span>
-									</button>
-									<button
-										type="button"
-										className="btn btn-primary"
+									</div>
+									<div
+										className="button-style"
 										data-dismiss="modal"
 										onClick={() =>
 											this.props.onSetTurn(
@@ -96,7 +94,7 @@ export class StartUpScreen extends React.Component {
 											)
 										}>
 										<span className="oMarker">O</span>
-									</button>
+									</div>
 								</div>
 								<br />
 							</div>

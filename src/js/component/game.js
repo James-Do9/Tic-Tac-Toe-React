@@ -71,53 +71,51 @@ export class Game extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="row">
+				<div className="square-board">
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(0)}>
 						{this.state.squareValues[0]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(1)}>
 						{this.state.squareValues[1]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(2)}>
 						{this.state.squareValues[2]}
 					</div>
-				</div>
-				<div className="row">
+
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(3)}>
 						{this.state.squareValues[3]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(4)}>
 						{this.state.squareValues[4]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(5)}>
 						{this.state.squareValues[5]}
 					</div>
-				</div>
-				<div className="row">
+
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(6)}>
 						{this.state.squareValues[6]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(7)}>
 						{this.state.squareValues[7]}
 					</div>
 					<div
-						className="square col"
+						className="square"
 						onClick={() => this.updateNextMove(8)}>
 						{this.state.squareValues[8]}
 					</div>

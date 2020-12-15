@@ -25,6 +25,8 @@ export class Home extends React.Component {
 			return (
 				<div>
 					<StartUpScreen onSetTurn={this.setTurn} />
+					<br />
+					<br />
 					<Game
 						onNextTurn={this.nextTurn}
 						currentPlayer={this.state.player}
@@ -35,7 +37,23 @@ export class Home extends React.Component {
 		} else if (this.state.winner != "") {
 			return (
 				<div>
-					<h1>Congratulations {this.state.winner} !</h1>
+					<h1>
+						Congratulations{" "}
+						{this.state.winner == "X"
+							? this.state.player1
+							: this.state.player2}
+						! You won!
+					</h1>
+					<h2>Want to play again?</h2>
+					<h2>Refresh if you want to change your usernames!</h2>
+					<br />
+					<br />
+					<br />
+					<Game
+						onNextTurn={this.nextTurn}
+						currentPlayer={this.state.player}
+						newWinner={this.setWinner}
+					/>
 				</div>
 			);
 		}

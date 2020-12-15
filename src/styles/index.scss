@@ -1,18 +1,53 @@
 @import "~bootstrap/scss/bootstrap.scss";
+body{
+    background-color: rgb(93,88,83);
+    color:white;
+}
 h1, h2{
     text-align: center;
 }
-.square{
-    background:white;
-    border: 1px solid grey;
-    margin-right:-1px;
-    margin-top:-1px;
-    padding: 0;
+
+.modal-background{
+    background-color: rgb(74,67,60);
+}
+input{
+    margin: 10px;
+}
+.xMarker{
+    color: rgb(237,217,125);
+    font-size: 50px;
+    font-weight: bold;
+} 
+.oMarker{
+    color: rgb(63,172,214);
+    font-size:50px;
+    font-weight: bold;
+}
+.button-style{
     width: 80px;
     height: 80px;
+    margin: auto;
     text-align: center;
-    font-size: 40px;
+    background-color: rgb(64,58,52);
+}
+.square{
+    font-family: Helvetica;
     font-weight: bold;
-    line-height: 80px;
-    margin:auto;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(93,88,83);
+}
+
+.square-board{
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+    background-color: rgb(105,102,98);
+    color: #fff;
+	display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
 }
