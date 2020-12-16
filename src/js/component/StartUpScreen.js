@@ -19,8 +19,6 @@ export class StartUpScreen extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Tic Tac Toe in React.js</h1>
-				<h2>Pick a weapon</h2>
 				<div className="text-center mt-5">
 					<button
 						type="button"

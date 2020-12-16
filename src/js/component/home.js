@@ -24,27 +24,33 @@ export class Home extends React.Component {
 		if (this.state.winner == "") {
 			return (
 				<div>
-					<StartUpScreen onSetTurn={this.setTurn} />
-					<br />
-					<br />
-					<Game
-						onNextTurn={this.nextTurn}
-						currentPlayer={this.state.player}
-						newWinner={this.setWinner}
-					/>
+					{this.state.player1 == null &&
+					this.state.player2 == null ? (
+						<div>
+							<h1>Tic Tac Toe in React.js</h1>
+							<h2>Pick a weapon</h2>
+							<StartUpScreen onSetTurn={this.setTurn} />
+						</div>
+					) : (
+						<div>
+							<h1>Tic Tac Toe in React.js</h1>
+							<h2>Pick a weapon</h2>
+							<h1>
+								{this.state.player == "X"
+									? this.state.player1
+									: this.state.player2}
+								&apos;s Turn
+							</h1>
+							<Game
+								onNextTurn={this.nextTurn}
+								currentPlayer={this.state.player}
+								newWinner={this.setWinner}
+							/>
+						</div>
+					)}
 				</div>
 			);
-		} /*Tru adding a else if condition with else if (this.state.winner == "" && this.state.player1 != "" && this.state.player2 != "") {
-			return (
-				<div>
-					<StartUpScreen onSetTurn={this.setTurn} />
-					<br />
-					<h1>{this.state.player == "X" ? this.state.player1 : this.state.player2}&apos;s Turn</h1>
-					<Game onNextTurn={this.nextTurn} currentPlayer={this.state.player} newWinner={this.setWinner}/>
-				</div>);
-		}*/ else if (
-			this.state.winner != ""
-		) {
+		} else if (this.state.winner != "") {
 			return (
 				<div>
 					<h1 className="congratulations">
@@ -54,11 +60,8 @@ export class Home extends React.Component {
 							: this.state.player2}
 						! You won!
 					</h1>
-					<h2>Want to play again?</h2>
+					<h2>Want to play again? Just click the board!</h2>
 					<h2>Refresh if you want to change your usernames!</h2>
-					<br />
-					<br />
-					<br />
 					<Game
 						onNextTurn={this.nextTurn}
 						currentPlayer={this.state.player}
