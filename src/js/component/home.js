@@ -34,7 +34,17 @@ export class Home extends React.Component {
 					/>
 				</div>
 			);
-		} else if (this.state.winner != "") {
+		} /*Tru adding a else if condition with else if (this.state.winner == "" && this.state.player1 != "" && this.state.player2 != "") {
+			return (
+				<div>
+					<StartUpScreen onSetTurn={this.setTurn} />
+					<br />
+					<h1>{this.state.player == "X" ? this.state.player1 : this.state.player2}&apos;s Turn</h1>
+					<Game onNextTurn={this.nextTurn} currentPlayer={this.state.player} newWinner={this.setWinner}/>
+				</div>);
+		}*/ else if (
+			this.state.winner != ""
+		) {
 			return (
 				<div>
 					<h1 className="congratulations">

@@ -21,6 +21,7 @@ export class Game extends React.Component {
 		this.setState({ squareValues: newSquareValues });
 		this.checkForWinner(newSquareValues);
 		if (!newSquareValues.includes("")) {
+			/*Sets the squareValues array to empty strings if the newSquareValues array is filled with Xs and Os*/
 			this.setState({
 				squareValues: ["", "", "", "", "", "", "", "", ""]
 			});
@@ -41,6 +42,7 @@ export class Game extends React.Component {
 		];
 		var winner = "";
 		winBoards.forEach(winningCombo => {
+			/*Checks the newSquareValues and check the indexes if there is a value. If there are more than 2 counters, then it resets the game */
 			var counter = 0;
 			for (let i = 0; i < winningCombo.length; i++) {
 				if (winningCombo[i] == 1) {
