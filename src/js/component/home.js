@@ -24,17 +24,21 @@ export class Home extends React.Component {
 		if (this.state.winner == "") {
 			return (
 				<div>
+					<h1>Tic Tac Toe in React.js</h1>
+					<h2>Pick a weapon</h2>
 					{this.state.player1 == null &&
 					this.state.player2 == null ? (
 						<div>
-							<h1>Tic Tac Toe in React.js</h1>
-							<h2>Pick a weapon</h2>
 							<StartUpScreen onSetTurn={this.setTurn} />
 						</div>
 					) : (
 						<div>
-							<h1>Tic Tac Toe in React.js</h1>
-							<h2>Pick a weapon</h2>
+							<h2>
+								{this.state.winner != this.state.player1 ||
+								this.state.winner != this.state.player2
+									? "Nobody has won yet..."
+									: null}
+							</h2>
 							<h1>
 								{this.state.player == "X"
 									? this.state.player1
@@ -62,6 +66,8 @@ export class Home extends React.Component {
 					</h1>
 					<h2>Want to play again? Just click the board!</h2>
 					<h2>Refresh if you want to change your usernames!</h2>
+					<br />
+					<br />
 					<Game
 						onNextTurn={this.nextTurn}
 						currentPlayer={this.state.player}
